@@ -82,3 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300);
     });
 });
+
+function sendAppointmentEmail(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const datepicker = document.getElementById("datepicker").value;
+    const time = document.getElementById("time").value;
+
+    fetch("http://localhost:3000/send-whatsapp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, datepicker, time }),
+    })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => console.error("Error:", error));
+}
