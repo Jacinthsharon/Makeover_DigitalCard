@@ -567,56 +567,84 @@ ul{
 
 /************************ 9.Price css ***************************/
 .price-sec {
-	background: var(--16, #F5F5F5);
-	padding: 30px 0;
+    background: var(--16, #F5F5F5);
+    padding: 30px 0;
 }
 .price-content {
-	background: var(--1, #FFF);
-	padding: 20px;
+    background: var(--1, #FFF);
+    padding: 20px;
+    min-height: 250px; /* Add minimum height */
+    background-size: cover !important; /* Ensure background covers the element */
+    background-position: center !important; /* Center the background */
+    background-repeat: no-repeat !important; /* Prevent repeating */
 }
 .contact-price a {
-	width: fit-content;
-	padding: 8px 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--1, #FFF);
-	text-align: center;
-	font-family: Poppins;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 18px;
-	border-radius: 5px;
-	background: var(--20, #eac229);
-	margin: 0 auto;
+    width: fit-content;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--1, #FFF);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    border-radius: 5px;
+    background: var(--20, #eac229);
+    margin: 0 auto;
 }
 .price-txt1 {
-	color: var(--26, #141414);
-	text-align: center;
-	font-family: Poppins;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 24px;
+    color: var(--26, #141414);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
 }
 .price-content h2 {
-	color: var(--17, #eac229);
-	text-align: center;
-	font-family: Poppins;
-	font-size: 64px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 64px;
+    color: var(--17, #eac229);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
 }
 .price-txt2 {
-	color: var(--26, #141414);
-	text-align: center;
-	font-family: Poppins;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 18px;
+    color: var(--26, #141414);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    #card1 {
+        background-image: url('../images/services/Untitled\ design\ \(1\).png') !important;
+    }
+    #card2 {
+        background-image: url('../images/services/Artboard%202.png') !important;
+    }
+    #card3 {
+        background-image: url('../images/services/Artboard%201.png') !important;
+    }
+    
+    /* Optional: Adjust card height for better visibility */
+    .price-content {
+        min-height: 180px !important;
+    }
+    
+    /* Optional: Reduce font size for better fit */
+    .price-content h2 {
+        font-size: 36px !important;
+        line-height: 40px !important;
+    }
 }
 
 /************************ 10.Appointment css ***************************/
